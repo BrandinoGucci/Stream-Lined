@@ -1,5 +1,5 @@
 git clone -b master --single-branch https://github.com/BrandinoGucci/Stream-Lined
 
-download visual studio code and also nodejs
+download visual studio code, nodejs, and mongodb
 
 run the app using "node app" in the terminal
