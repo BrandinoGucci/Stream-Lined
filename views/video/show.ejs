@@ -1,0 +1,15 @@
+<%- include('../partials/header.ejs')%>
+    <div class = "content">
+      <br><h4 style="font-size: x-large;"><%= video.title%></h4><br>
+       <iframe width=630 height=517.5 src="<%= video.display%>" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+       
+       <form>
+         <button type = "submit" id="addButton" formmethod = "GET" formaction = "/videos/<%= video._id%>/edit"><b>Edit Title</b></button>
+         <button type = "submit" id="addButton" formmethod = "POST" formaction = "/videos/<%= video._id%>?_method=DELETE"><b>Delete from list</b></button>
+       </form>
+       <!--script>
+             var x = document.getElementsByClassName("ytp-error-content-wrap-reason");
+             x[0].innerHTML = "This channel is not online";
+       </script-->
+    </div>
+    <%- include('../partials/footer.ejs')%>

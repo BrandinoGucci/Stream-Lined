@@ -1,0 +1,24 @@
+<%- include('../partials/header.ejs')%>
+    <br><h3>Paste channel URL from Youtube or Twitch here</h3><br>
+<div class = "content">
+    <br>
+    <form action = '/streams' method = 'POST'>
+        <table>
+            <col style="width:70%">
+	        <col style="width:0%">
+            <tr>
+                <td><label class="addLabel" for="display">Video Link</label></td>
+                <td><input class="addText" type="text" id="author" name="display" class = "fixed-width" required></td>
+            </tr>
+            <tr>
+                <td><label class="addLabel" for="title">Display Name</label></td>
+                <td><input class="addText" type="text" id="title" name="title" class = "fixed-width" required></td>
+            </tr>
+            <tr>
+                <td colspan="2" class = "align-right"><button id="addButton"><b>Finish Addition</b></button> </td>
+            </tr>
+        </table>        
+    </form>
+
+    </div>
+    <%- include('../partials/footer.ejs')%>

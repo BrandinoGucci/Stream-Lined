@@ -1,0 +1,16 @@
+<%- include('../partials/header.ejs')%>     
+    <div class = "content">
+      <div class="midBody">
+        <%if(streams.length) {%>
+          <br><h2><b>Select a saved stream to view</b></h2>
+          <br>
+            <%streams.forEach(stream=>{%>
+               <list><a style="color: azure;" href = "/streams/<%= stream._id%>"> <p><%= stream.title%></p></a></list>
+               <br>
+           <% });
+        } else {%>
+            <p><b>Your list is not currently populated, please add streams.</b></p>
+        <%}%>
+      </div>
+    </div>
+    <%- include('../partials/footer.ejs')%>

@@ -1,0 +1,26 @@
+<%- include('../partials/header.ejs')%>
+    <div class = "content">
+        <br><h4 style="font-size: x-large;"><%= stream.title%></h4><br>
+        <%if (stream.display.includes("link was invalid")) { %>
+            <h4 style="font-size: x-large;"><%= stream.display%></h4>
+        <% } else if (!stream.display.includes("https://www.")) { %>
+            <h4 style="font-size: x-large;"><%= stream.display%></h4>
+            <div id="twitch-embed"></div>
+       <% } else { %> 
+         <iframe width=630 height=517.5 src="<%= stream.display%>" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+         <% } %>
+        <form>
+            <button type = "submit" id="addButton" formmethod = "GET" formaction = "/streams/<%= stream._id%>/edit"><b>Edit Title</b></button>
+            <button type = "submit" id="addButton" formmethod = "POST" formaction = "/streams/<%= stream._id%>?_method=DELETE"><b>Delete from list</b></button>
+        </form>
+     </div>
+<script src="https://embed.twitch.tv/embed/v1.js"></script>
+<script type="text/javascript">
+    new Twitch.Embed("twitch-embed", {
+    width: 855,
+    height: 480,
+    channel: "<%= stream.display%>",
+    parent: "localhost"
+    });
+</script>
+<%- include('../partials/footer.ejs')%>

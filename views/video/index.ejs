@@ -1,0 +1,16 @@
+<%- include('../partials/header.ejs')%>
+    <div class = "content">
+      <div class="midBody">
+        <%if(videos.length) {%>
+            <br><h2><b>Select a saved clip to view</b></h2>
+            <br>
+            <%videos.forEach(video=>{%>
+               <list><a style="color: azure;" href = "/videos/<%= video._id%>"> <p><%= video.title%></p></a></list>
+               <br>
+           <% });
+        } else {%>
+            <p><b>Your list is not currently populated, please add videos.</b></p>
+        <%}%>
+      </div>
+    </div>
+    <%- include('../partials/footer.ejs')%>

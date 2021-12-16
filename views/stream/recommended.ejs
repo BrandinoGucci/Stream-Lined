@@ -1,0 +1,34 @@
+<%- include('../partials/header.ejs')%>
+
+        <p><b>Select a recommended stream</b></p>
+        <div>
+            <%for (let i = 0; i < recommended.data.length; i++) {%>
+                <!--You can change the 400x200 in the below url to be any width and length. It just has to be hard done since twitch stores the data as {width}x{height} in the url for some reason-->
+                <img src="https://static-cdn.jtvnw.net/previews-ttv/live_user_<%- recommended.data[i].user_login%>-400x200.jpg">
+                <p>
+                    <b><%- recommended.data[i].user_name%></b> is live!
+                    <br>
+                    <%- recommended.data[i].title%>
+                    <br>
+                    <form action = '/streams' method = 'POST'>
+                    Playing <%- recommended.data[i].game_name%> with
+                    <%- recommended.data[i].viewer_count%> viewers at <!--p id="<%='target'+i%>"--><b>twitch.tv/<%- recommended.data[i].user_name%>
+                    <tr>
+                        <td hidden><label hidden class="addLabel" for="display">Video Link</label></td>
+                        <td hidden><input hidden class="addText" value="twitch.tv/<%- recommended.data[i].user_name%>" type="text" id="author" name="display" class = "fixed-width" required></td>
+                    </tr>
+                    <tr>
+                        <td><label hidden class="addLabel" for="title">Display Name</label></td>
+                        <td><input hidden class="addText" value="<%- recommended.data[i].user_name%> ☆" type="text" id="title" name="title" class = "fixed-width" required></td>
+                    </tr>
+                    <tr>
+                        <br><td hidden colspan="2" class="align-right"><button id="addButton"><b>Add to Streamer List</b></button></td>
+                    </tr>
+                    </form>
+                    
+                </p>
+                
+                <br><br><br>
+           <% };%>
+        </div>
+<%- include('../partials/footer.ejs')%>

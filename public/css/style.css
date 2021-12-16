@@ -1,0 +1,199 @@
+*
+{
+text-align: center !important;
+margin: auto !important;
+}
+
+#container, html{
+  background-color: rgb(201, 151, 226);
+  
+}
+body {
+    /*margin: 0;*/
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+  }
+
+logo h2{
+  padding-top: 1%;
+  background-color: blueviolet;
+  font-family: fantasy;
+  padding-bottom: 1%;
+  font-size: 250%;
+  color: black;
+  
+}
+logo h2 div{
+  background-color: ghostwhite;
+  width: 15%;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+  border-color: rgb(0, 0, 0);
+  border-style: double;
+}
+logo st{
+  color: rgb(168, 43, 226) !important ;
+}
+logo l{
+  color: crimson !important ;
+}
+logo div:hover{
+  text-decoration: none;
+  background-color:rgb(97, 24, 107);
+}
+logo a:visited{
+  text-decoration: none;
+  color:black;
+}
+
+nav {
+    overflow: hidden;
+    color: white;
+    background-color: rgb(179, 0, 0);
+    width: 100%;
+}
+
+.table {
+	display: table;
+	margin: 0 auto;
+  padding-bottom: 1%;
+}
+nav ul{
+	list-style: none;
+	padding-top: 1%;
+}
+nav ul li{
+  background-color: blueviolet;
+  border-style: groove;
+  border-color: brown;
+  display: inline;
+  padding: .5% 5% .5% 5%;
+}
+nav a, nav a:hover{
+   text-decoration: none;
+   color: white;
+   display: inline-block;
+ }
+
+ul{
+  list-style: none;
+}
+
+ footer {
+  color: white;
+  background-color: rgb(179, 0, 0);
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.content{
+  text-align: center;
+}
+.content a, .content a:hover{
+  text-decoration: none;
+}
+
+.contentHome{
+  padding-top: 80px;
+  text-align: center;
+}
+
+#BigButton{
+  padding: 20px;
+  
+}
+#BigButton img:hover{
+  background-color: rgb(255, 0, 200);
+  width: 17%;
+}
+#BigButton h2:hover{
+  color: aliceblue;
+  text-decoration: none;
+  background-color: rgb(255, 0, 200);
+}
+#BigButton h2{
+  background-color: rgb(218, 170, 12);
+  width: 20%;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+  border-color: rgb(0, 0, 0);
+  border-style: double;
+  font-family: fantasy;
+  color: black;
+}
+
+#story{
+ width: 50%;
+ padding-top: 20px;
+ padding-bottom: 20px
+}
+
+label{
+  font-size: small;
+}
+
+nav ul li:hover {
+  background-color: rgb(255, 0, 200);
+}
+
+td{
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+.addLabel{
+  font-size: large;
+}
+.addText{
+  height: 19px;
+  width: 299px;
+  background-color: deepskyblue;
+  color:darkred
+}
+
+.midBody{
+  padding-left: 15px;
+  font-size: 21px;
+}
+.midBody list:hover{
+  font-size: 30px;
+}
+
+#addButton{
+  color: aliceblue;
+  background-color: crimson;
+  height: 48px;
+  width: 139px;
+  font-size: medium;
+}
+#addButton:hover{
+  background-color: rgb(109, 26, 77);
+}
+
+.align-top{
+  vertical-align: top;
+}
+
+.align-right{
+  text-align: right;
+  display: inline;
+}
+
+.fixed-width{
+  width: 300px;
+}
+
+input, textarea{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.content form table tr{
+  display: block;
+  padding: 1%;
+}
+.content form table td{
+  width: 1000%;
+}

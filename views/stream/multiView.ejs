@@ -1,0 +1,33 @@
+<%- include('../partials/header.ejs')%>
+   <h2>Streams Multi-View</h2>
+    <div class = "content">
+    <% if(streams.length) {%>
+        <ul>
+            <%streams.forEach(stream=>{%>
+                <li>
+                    <h4><%= stream.title%></h4>
+                    <%if (stream.display.includes("link was invalid")) { %>
+                        <h4 style="font-size: x-large;"><%= stream.display%></h4>
+                    <% } else if (!stream.display.includes("https://www.")) { %>
+                        <area id="twitch-embed-<%= stream.display%>"></area>
+                        <script src="https://embed.twitch.tv/embed/v1.js"></script>
+                        <script type="text/javascript">
+                         new Twitch.Embed("twitch-embed-<%= stream.display%>", {
+                           width: 855,
+                           height: 480,
+                           channel: "<%= stream.display%>",
+                           parent: "localhost"
+                         });
+                       </script>
+                       <% } else { %> 
+                         <iframe width=630 height=517.5 src="<%= stream.display%>" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                         <% } %>
+                </li>
+            <%});%>
+        </ul>
+        <%} else {%>
+            <p>There are no Live Streams to display</p>
+            <%}%>
+        </div>
+        <br><br><br>
+    <%- include('../partials/footer.ejs')%>
